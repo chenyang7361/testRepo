@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/bg_detail_book">
+
+    <FrameLayout
+        android:id="@+id/fr_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="35dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/bg_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:background="@color/themeColor" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_toEndOf="@+id/fr_cover">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/text_dark_black"
+            android:textSize="15dp"
+            tools:text="告别死工资，我们教你钱生钱" />
+
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_title"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:textColor="@color/text_recom_more"
+            android:textSize="12dp"
+            tools:text="预计更新53节，已更新33节" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="6dp"
+            android:lines="1"
+            android:textColor="@color/text_recom_more"
+            android:textSize="12dp"
+            tools:text="预计更新53节，已更新33节" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/author"
+            android:layout_marginTop="6dp"
+            android:lines="1"
+            android:textColor="@color/text_recom_more"
+            android:textSize="12dp"
+            tools:text="预计更新53节，已更新33节" />
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/share"
+            android:layout_width="21dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/category"
+            android:layout_marginEnd="17dp"
+            android:layout_marginTop="23dp"
+            android:layout_toEndOf="@+id/collect"
+            android:src="@drawable/icon_share" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/collect"
+            android:layout_width="18dp"
+            android:layout_height="16dp"
+            android:layout_below="@+id/category"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/icon_to_collect" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

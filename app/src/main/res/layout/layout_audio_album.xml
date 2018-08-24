@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/album_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitEnd" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:paddingBottom="1dp"
+        android:layout_toRightOf="@+id/album_img">
+
+        <TextView
+            android:id="@+id/album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/audio_play_audio_title_color"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="11dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/album_name"
+            android:src="@drawable/icon_more" />
+
+        <TextView
+            android:id="@+id/subscribe_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/album_name"
+            android:layout_below="@+id/album_name"
+            android:textColor="@color/audio_play_audio_describe_color"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</merge>

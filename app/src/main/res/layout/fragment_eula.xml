@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.mivideo.mifm.ui.widget.SimpleTitleBar
+        android:id="@+id/simpleTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:leftTitle="@string/video_mine_use_rule" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/pb_web_view"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:progressDrawable="@drawable/progress_webview_load"
+            android:visibility="gone"
+            tools:progress="50" />
+
+        <com.mivideo.mifm.ui.widget.CustomWebView
+            android:id="@+id/wv_eula"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</LinearLayout>

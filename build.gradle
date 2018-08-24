@@ -1,10 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+buildscript {
+    ext {
+        compileSdkVersion = 26
+        buildToolsVersion = "26.0.2"
+        minSdkVersion = 14
+        targetSdkVersion = 22
+        supportLibVersion = "27.0.2"
+        kotlinVersion = '1.2.21'
+    }
+    repositories {
+        jcenter()
+        google()
+        maven { url 'https://maven.google.com' }
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath 'com.meituan.android.walle:plugin:1.1.6'
+        classpath 'io.fabric.tools:gradle:1.25.4'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
 
+plugins {
+    id 'com.sarhanm.versioner' version '2.3.12'
+}
 
+versioner {
+    solidBranchRegex = ".*"
+}
 
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://maven.google.com' }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url 'http://nexus.d.xiaomi.net/nexus/content/groups/public' }
+    }
+}
 
-
-
-
-
-
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

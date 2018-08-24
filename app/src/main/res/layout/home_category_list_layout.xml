@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbarSize"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <com.mivideo.mifm.ui.widget.TabLayout2
+        android:id="@+id/categoryListTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarSize"
+        android:background="@color/colorPrimary"
+        android:paddingRight="2dp"
+        android.support.design:tabBackground="?attr/selectableItemBackgroundBorderless"
+        android.support.design:tabIndicatorColor="#00ffffff"
+        android.support.design:tabIndicatorHeight="0dp"
+        android.support.design:tabMinWidth="50dp"
+        android.support.design:tabMode="scrollable"
+        android.support.design:tabSelectedTextColor="#ff000000"
+        android.support.design:tabTextAppearance="@style/tabLayoutTextSize"
+        android.support.design:tabTextColor="@color/text_recom_more" />
+
+</RelativeLayout>

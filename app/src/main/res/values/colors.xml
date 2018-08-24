@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffffff</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="themeColor">#6532F4</color>
+    <color name="loadMoreEndColor">#441aac18</color>
+    <color name="colorDark">#ff000000</color>
+    <color name="white">#ffffff</color>
+    <color name="subscribeColor">#B6FF00</color>
+    <color name="subscribeTextColor">#000000</color>
+    <color name="subscribeAlreadyTextColor">#66000000</color>
+    <color name="subscribeAlreadySolidColor">#eaeaea</color>
+    <color name="subscribeAlreadyStokeColor">#eaeaea</color>
+
+    <color name="common_gray_bg">#f2f2f2</color>
+    <color name="divide_line_color">#33000000</color>
+    <color name="common_black">#0b0b0c</color>
+    <color name="defaultImageLayerColor">#4D000000</color>
+    <color name="text_dark_black">#14263F</color>
+    <color name="recom_header_logo">#C7D5DC</color>
+    <color name="text_recom_more">#9DB2BC</color>
+
+    <color name="load_success">@color/themeColor</color>
+    <color name="load_failure">#F27474</color>
+    <color name="palette_white">#FFFFFF</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="palette_transparent">#00000000</color>
+    <color name="palette_black_40">#66000000</color>
+    <drawable name="co1">#ffffff</drawable>
+    <drawable name="co2">#e8e8e9</drawable>
+    <color name="palette_gray">#A7A9AE</color>
+    <color name="lineColor">#16000000</color>
+    <color name="viewBackColor">#efeff1</color>
+
+    <color name="alpha_0.5_black">#AF000000</color>
+
+    <!-- 音频播放页 -->
+    <color name="audio_play_audio_title_color">#14263F</color>
+    <color name="audio_play_audio_describe_color">#9DB2BC</color>
+    <color name="audio_play_seek_color">#6532F4</color>
+    <color name="audio_play_seek_pressed_color">#B06532F4</color>
+    <color name="audio_play_seek_bg_color">#4AC7D5DC</color>
+    <color name="audio_play_seek_secondary_progress_color">#70C7D5DC</color>
+    <color name="text_light_black">#60000000</color>
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/subscribe_title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/loginView"
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/avatarView"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    tools:src="@drawable/my_avatar" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@+id/avatarView"
+                    android:textColor="@color/text_dark_black"
+                    android:textSize="20dp"
+                    tools:text="用户名" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginStart="17dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/play_without_wifi"
+                    android:textColor="@color/text_dark_black" />
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/wifiPlaySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="17dp"
+                    app:kswBackDrawable="@drawable/settings_switchbtn_back_drawable"
+                    app:kswBackMeasureRatio="2"
+                    app:kswThumbDrawable="@drawable/settings_switchbtn_thumb_drawable"
+                    app:kswThumbHeight="18dp"
+                    app:kswThumbWidth="18dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="17dp"
+                    android:background="@color/lineColor"/>
+
+            </RelativeLayout>
+
+            <com.mivideo.mifm.ui.widget.MineItemView
+                android:id="@+id/aboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:itemTitle="@string/about_us" />
+
+            <com.mivideo.mifm.ui.widget.MineItemView
+                android:id="@+id/feedBack"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:itemTitle="@string/feed_back" />
+
+            <com.mivideo.mifm.ui.widget.MineItemView
+                android:id="@+id/clearCache"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                app:itemTitle="@string/clear_cache" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

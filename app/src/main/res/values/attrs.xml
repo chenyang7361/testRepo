@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- titleBar自定义属性 -->
+    <declare-styleable name="SimpleTitleBar">
+        <attr name="leftTitle" format="string" />
+        <attr name="leftTitleColor" format="color" />
+        <attr name="leftDrawable" format="reference" />
+        <attr name="middleTitle" format="string" />
+        <attr name="middleTitleColor" format="color" />
+        <attr name="rightTitle" format="string" />
+        <attr name="rightTitleColor" format="color" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="showBackArrow" format="boolean" />
+    </declare-styleable>
+</resources>

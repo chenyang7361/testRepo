@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/cover_bg_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/audio_play_cover_bg_img_margin_top"
+        android:layout_marginBottom="@dimen/audio_play_cover_bg_img_margin_bottom"
+        android:alpha="0.6"/>
+
+    <ImageView
+        android:id="@+id/cover_img"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/audio_play_cover_img_height_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/audio_play_cover_img_margin_top"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+</merge>

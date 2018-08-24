@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/playing0"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing1"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing2"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing3"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing4"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing5"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing6"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing7"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing8"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing9"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing10"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing11"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing12"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing13"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing14"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing15"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing16"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing17"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing18"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing19"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing20"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing21"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing22"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing23"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing24"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing25"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing26"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing27"
+        android:duration="10" />
+    <item
+        android:drawable="@drawable/playing28"
+        android:duration="10" />
+
+    <item
+        android:drawable="@drawable/playing29"
+        android:duration="10" />
+
+</animation-list>

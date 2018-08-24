@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_controller_view"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_gravity="bottom"
+    android:layout_marginLeft="14dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/video_controller_current_time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:padding="0dp"
+        android:text="@string/video_default_delay"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp" />
+
+    <SeekBar
+        android:id="@+id/video_controller_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:max="100"
+        android:maxHeight="2dp"
+        android:minHeight="2dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="8dp"
+        android:splitTrack="false"
+        android:progressDrawable="@drawable/seek_progress"
+        android:thumb="@drawable/seek_thumb" />
+
+    <TextView
+        android:id="@+id/video_controller_duration_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:padding="0dp"
+        android:text="@string/video_default_delay"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/video_controller_zoom_view"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="14dp"
+        app:srcCompat="@drawable/ic_player_fullscreen" />
+</LinearLayout>

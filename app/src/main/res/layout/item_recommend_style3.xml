@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="13dp"
+    android:paddingEnd="7dp"
+    android:paddingStart="7dp"
+    android:paddingTop="13dp">
+
+    <com.mivideo.mifm.ui.widget.RectImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@color/themeColor" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="小米FM小米FM"
+        android:textColor="@color/text_dark_black"
+        android:textSize="13dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:lines="2"
+        tools:text="小米FM小米FM小米FM小米FM小米FM小米FM小米FM小米FM"
+        android:textColor="@color/palette_black_40"
+        android:textSize="11dp" />
+</RelativeLayout>

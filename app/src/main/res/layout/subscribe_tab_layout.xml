@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.mivideo.mifm.ui.widget.SubscribeTab
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android.support.design:tabBackground="?attr/selectableItemBackgroundBorderless"
+        android.support.design:tabIndicatorColor="#00ffffff"
+        android.support.design:tabIndicatorHeight="0dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_recom_more" />
+</LinearLayout>

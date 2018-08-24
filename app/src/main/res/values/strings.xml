@@ -1,0 +1,211 @@
+<resources>
+    <string name="app_name">小米FM</string>
+
+    <string name="load_data_error">加载失败，请重试</string>
+    <string name="load_data_complete">没有数据啦</string>
+
+    <string name="tip_no_net">网络出现问题啦，请检查后重试</string>
+    <string name="retry">重试</string>
+    <string name="play_list_complete">列表播放完毕</string>
+    <string name="text_continue">继续</string>
+    <string name="use_mobile_network_ask_continue">当前使用数据流量，是否继续？</string>
+
+    <string name="video_default_delay">00:00</string>
+    <string name="video_take_offline">该视频已下线</string>
+    <string name="video_play_failure">视频播放失败</string>
+    <string name="not_found_network">抱歉，没有找到网络哦</string>
+    <!--subscribe-->
+    <string name="more">更多</string>
+    <string name="playing_list">听单</string>
+    <string name="history">历史</string>
+    <string name="favor">订阅</string>
+    <string name="download">下载</string>
+    <string name="player">主播</string>
+    <string name="my_collect">我的订阅</string>
+
+    <!-- share start -->
+    <string name="share_dialog_title">分享至</string>
+    <string name="share_name_wx">微信好友</string>
+    <string name="share_name_wx_friend">微信朋友圈</string>
+    <string name="share_name_qq">QQ好友</string>
+    <string name="share_name_qq_space">QQ空间</string>
+    <string name="share_name_wb">新浪微博</string>
+    <string name="share_name_copy_link">复制链接</string>
+    <string name="share_name_no_mind">不感兴趣</string>
+    <string name="share_name_report">举报</string>
+    <string name="share_name_download">下载</string>
+    <string name="share_dialog_cancel">取消</string>
+    <string name="share_copy_success">复制成功</string>
+    <string name="need_install_wb">需安装微博客户端</string>
+    <string name="need_install_qq">需安装QQ客户端</string>
+    <string name="need_install_wx">需安装微信客户端</string>
+    <string name="sorry_no_able_share">抱歉，当前视频暂不支持分享</string>
+    <string name="sorry_no_able_share_author">抱歉，当前作者暂不支持分享</string>
+    <string name="share_toast_success">分享成功</string>
+    <string name="share_toast_cancel">分享取消</string>
+    <string name="share_toast_error">分享失败</string>
+    <string name="share_qq_summary">内容来自小米快视频APP</string>
+    <string name="share_not_supported">该视频不支持分享</string>
+    <!-- share end -->
+
+    <string name="video_mine_use_rule">用户协议</string>
+    <string name="privacy_clause">隐私条款</string>
+    <string name="login_stands_agree">登录即表示您同意</string>
+    <string name="embrace_user_agreement">《用户协议》</string>
+    <string name="and">和</string>
+    <string name="embrace_privacy_clause">《隐私条款》</string>
+    <string name="logining">正在登录...</string>
+    <string name="login_fail">登录失败</string>
+    <string name="app_not_install_yet">您好像尚未安装此APP</string>
+    <string name="text_confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="login_need_permission">小米账户登录需到设置-更多应用-小米快视频-权限管理-访问手机账户中，开启访问权限</string>
+    <string name="go_to_setting">去设置</string>
+
+    <!-- plugin start -->
+    <string name="plugin_warning_id_lost">安装前检查：插件标识丢失</string>
+    <string name="plugin_warning_path_lost">安装前检查：缓存路径丢失</string>
+    <string name="plugin_warning_cache_not_fount">安装前检查：缓存文件不存在</string>
+    <string name="plugin_warning_id_already_installed">安装前检查：相同文件已安装</string>
+    <string name="plugin_warning_success">成功</string>
+    <string name="plugin_warning_src_file_not_found">失败: 安装文件未找到</string>
+    <string name="plugin_warning_copy_file_fail">失败: 复制安装文件到安装目录失败</string>
+    <string name="plugin_warning_signatures_invalidate">失败: 安装文件验证失败</string>
+    <string name="plugin_warning_verify_signatures_fail">失败: 插件和宿主签名串不匹配</string>
+    <string name="plugin_warning_parse_manifest_fail">失败: 插件Manifest文件解析出错</string>
+    <string name="plugin_warning_same_ver_has_loaded">失败: 同版本插件已加载,无需安装</string>
+    <string name="plugin_warning_high_ver_has_loaded">失败: 高版本插件已加载,无需安装</string>
+    <string name="plugin_warning_min_api_not_supported">失败: 当前系统版本过低,不支持此插件</string>
+    <string name="plugin_warning_plugin_not_exist">失败: 插件不存在</string>
+    <string name="plugin_warning_remove_fail">失败: 删除插件失败</string>
+    <string name="plugin_warning_host_version_not_support_current_plugin">失败: 插件要求的宿主版本和当前宿主版本不匹配</string>
+    <string name="plugin_warning_others">失败: 其他原因</string>
+
+    <string name="plugin_error_copy_file_fail">插件安装失败: 复制安装文件到安装目录失败</string>
+    <string name="plugin_error_signatures_invalidate">插件安装失败: 安装文件验证失败</string>
+    <string name="plugin_error_verify_signatures_fail">插件安装失败: 插件和宿主签名串不匹配</string>
+    <string name="plugin_error_parse_manifest_fail">插件安装失败: 插件Manifest文件解析出错</string>
+    <string name="plugin_error_min_api_not_supported">插件安装失败: 当前系统版本过低,不支持此插件</string>
+    <string name="plugin_error_plugin_not_exist">插件安装失败: 插件不存在</string>
+    <string name="plugin_error_remove_fail">插件安装失败: 删除插件失败</string>
+    <string name="plugin_error_host_version_not_support_current_plugin">插件安装失败: 插件要求的宿主版本和当前宿主版本不匹配</string>
+    <!-- plugin end -->
+
+    <!-- video cache start -->
+    <string name="video_cache_argument_illegal">数据丢失无法下载</string>
+    // 后台参数缺失（极小概率）
+    <string name="video_cache_device_capacity_illegal">空间不足200M无法下载</string>
+    // 空间不足
+    <string name="video_cache_mimetype_illegal">视频格式不支持</string>
+    // 格式不支持
+    <string name="video_cache_already_exist">该视频已下载</string>
+    // 已有缓存
+    <string name="video_cache_network_illegal">网络连接失败请重试</string>
+    // 网络无连接
+    <string name="video_cache_push_into_download_queue">非WIFI网络，已添加到下载队列</string>
+    // 数据网环境下，点击了"下载"
+    <string name="video_cache_waiting_download">视频已开始下载，可在我的下载中查看</string>
+    // 开始下载
+    <string name="video_cache_plugin_state_illegal">该视频不支持下载</string>
+    // 插件不存在
+    <string name="video_cache_plugin_unsupport_query_url">该视频不支持下载</string>
+    // 插件版本低
+    <string name="video_cache_play_list_empty">该视频不支持下载</string>
+    // 渠道SDK返空
+    <string name="video_cache_title">我的下载</string>
+    <string name="video_cache_manage">编辑</string>
+    <string name="video_cache_manage_cancel">取消</string>
+    <string name="video_cache_will_be_delete">已选择%1$d项</string>
+    <string name="video_cache_select_all">全选</string>
+    <string name="video_cache_deselect_all">不选</string>
+    <string name="video_cache_clear">删除</string>
+    <string name="video_cache_clear_dialog_message">确认清除所有下载视频么？</string>
+    <string name="video_cache_clear_ok">确定</string>
+    <string name="video_cache_clear_cancel">取消</string>
+    <string name="video_cache_ask_when_mobile_connect">当前使用数据流量，是否继续下载？</string>
+    <string name="video_cache_lost_recommend_to_redownload">视频缓存不存在，是否重新下载？</string>
+    <string name="video_cache_ask_remove_current_task">是否删除该任务？</string>
+    <string name="video_cache_never_played">未播放</string>
+    <string name="video_cache_already_played">已播放</string>
+    <string name="video_cache_fail_for_network_reason">下载暂停，请连接WIFI</string>
+    <string name="video_cache_fail_for_others_reason">下载失败，请重试</string>
+    <string name="video_cache_fail_for_manual_reason">暂停中</string>
+    <string name="video_cache_fail_for_server_reason">下载失败，受版权保护</string>
+    <string name="video_cache_select_no_video">请选择要删除的视频</string>
+    <string name="video_cache_clicked_when_mobile">连接WIFI后，会自动下载</string>
+    <string name="video_cache_waiting">等待中</string>
+    <string name="delete">删除</string>
+    <string name="play_history">播放历史</string>
+
+    <!--我的-->
+    <string name="feed_back">意见反馈</string>
+    <string name="suggest_opinion">意见</string>
+    <string name="clear_cache">清空缓存</string>
+    <string name="play_without_wifi">使用非WIFI网络播放</string>
+    <string name="click_to_login">点击登录</string>
+    <string name="login_cancel">登录取消</string>
+    <string name="about_us">关于我们</string>
+
+    <!--听头条-->
+    <string name="headline">听头条</string>
+    <string name="headline_news">头条快报</string>
+
+    <!--search-->
+    <string name="search_fragment_button">搜索</string>
+    <string name="search_edit_hint">搜索想学的内容</string>
+    <string name="search_input_keyword">请输入关键字</string>
+    <string name="search_fragment_cancel">取消</string>
+    <string name="search_count">为您找到%1d条结果</string>
+
+
+    <!-- suggest -->
+    <string name="suggest_fragment_title">意见反馈</string>
+    <string name="suggest_fragment_content_hint">请告诉我们你遇到的问题或想反馈的意见。\n欢迎大家吐槽，欢迎脑洞大开，欢迎调戏程序猿</string>
+    <string name="suggest_fragment_type">类型（选填）</string>
+    <string name="suggest_fragment_back">BUG反馈</string>
+    <string name="suggest_fragment_product">产品建议</string>
+    <string name="suggest_fragment_other">其他反馈</string>
+    <string name="suggest_fragment_contract">联系方式（选填）</string>
+    <string name="suggest_fragment_contract_type">手机号或邮箱均可</string>
+    <string name="suggest_fragment_button">发射</string>
+    <string name="suggest_fragment_msg_too_short">反馈信息过短</string>
+    <string name="suggest_fragment_msg_too_long">反馈信息过长</string>
+    <string name="suggest_fragment_upload_log">上传日志</string>
+    <string name="suggest_fragment_upload_plugin_log">播放失败问题</string>
+    <string name="suggest_fragment_on_uploading">正在反馈</string>
+    <string name="suggest_fragment_upload_success">反馈成功</string>
+    <string name="suggest_fragment_upload_failure">反馈失败，请稍后重试</string>
+    <string name="suggest_fragment_upload_failure_manual_send">反馈失败。若多次失败，您可以手动将%s目录下的所有文件以qq或邮件的形式发送给我们</string>
+    <string name="suggest_fragment_upload_failure_io">反馈失败，请检查手机存储空间或权限</string>
+    <string name="subscribe_wx_public">关注微信公众号</string>
+    <string name="feedback_result_msg">感谢您的反馈，程序员GG阿兴已知晓该反馈信息</string>
+    <string name="wx_public_copy_finished">已复制快视频客服公众号，请您手动关注</string>
+    <string name="data_error">数据错误</string>
+    <string name="noAppStore">未找到可用的应用市场</string>
+
+    <string name="user_info_error_hint">用户信息异常，请重新登录</string>
+    <string name="server_maintained">服务正在维护，请稍后重试！</string>
+    <string name="check_update">更新检测</string>
+    <string name="user_agreement">用户协议</string>
+
+    <!-- video cache end -->
+
+    <!-- Audio Play -->
+    <string name="audio_play_update_time_str">更新:%1$s</string>
+
+    <string name="no_content_to_play">暂无播放内容</string>
+    <string name="all_content">全部章节</string>
+    <string name="count_format">(%1$d)</string>
+    <string name="describe">介紹</string>
+    <string name="catalog">目录</string>
+    <string name="detail_author_format">作者：%1$s</string>
+    <string name="detail_category_format">类别：%1$s</string>
+    <string name="detail_update_format">更新：%1$s</string>
+    <string name="profile_edit">修改资料</string>
+    <string name="profile_avater">头像</string>
+    <string name="profile_name">昵称</string>
+    <string name="profile_sex">性别</string>
+    <string name="profile_birth">生日</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+</resources>

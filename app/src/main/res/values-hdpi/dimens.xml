@@ -1,0 +1,11 @@
+<resources>
+    <!-- 音频播放页 -->
+    <dimen name="audio_play_bg_radius">15dp</dimen>
+    <dimen name="audio_play_cover_img_height_width">140dp</dimen>
+    <dimen name="audio_play_cover_img_margin_top">50dp</dimen>
+    <dimen name="audio_play_cover_bg_img_height_width">174dp</dimen>
+    <dimen name="audio_play_cover_bg_img_margin_top">25dp</dimen>
+    <dimen name="audio_play_cover_bg_img_margin_bottom">18dp</dimen>
+    <dimen name="audio_play_controller_layout_margin_top">33dp</dimen>
+    <dimen name="audio_play_controller_view_margin_top">42dp</dimen>
+</resources>

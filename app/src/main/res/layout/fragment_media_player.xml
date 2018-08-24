@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress AndroidUnknownAttribute --><!-- 拖拽层 -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draggablePanel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:focusable="false">
+
+    <com.mivideo.mifm.ui.widget.StatusLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        />
+
+    <com.github.mmin18.widget.FlexLayout
+        android:id="@+id/draggableHandle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:background="@android:color/black"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!--suppress AndroidDomInspection -->
+        <FrameLayout
+            android:id="@+id/videoContainer"
+            app:layout_height="this.width*0.5625"
+            app:layout_width="match_parent"/>
+
+        <View
+            android:id="@+id/draggableBackground"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:background="@drawable/small_window_bg"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </com.github.mmin18.widget.FlexLayout>
+</RelativeLayout>

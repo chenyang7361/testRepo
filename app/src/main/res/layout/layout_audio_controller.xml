@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/audio_seek_bar_layout"
+        layout="@layout/layout_audio_seek" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/audio_play_controller_view_margin_top">
+
+        <ImageView
+            android:id="@+id/auto_off_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_auto_off" />
+
+        <ImageView
+            android:id="@+id/audio_last_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_play_last" />
+
+        <com.mivideo.mifm.ui.widget.MiniPlayerView
+            android:id="@+id/audio_play_pause_btn"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_weight="0"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/audio_next_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_play_next" />
+
+        <com.mivideo.mifm.ui.widget.DownloadView
+            android:id="@+id/download_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_download" />
+
+    </LinearLayout>
+</merge>

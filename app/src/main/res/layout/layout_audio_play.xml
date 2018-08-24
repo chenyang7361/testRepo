@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_corner_up_left_right">
+
+    <com.mivideo.mifm.ui.widget.player.AudioCoverView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/audio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cover"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/audio_play_audio_title_color"
+        android:textSize="18.5sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/audio_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/audio_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <!-- 音频播放次数，前期播放次数都为0，所以先不上 -->
+        <TextView
+            android:id="@+id/play_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/audio_play_audio_describe_color"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="  /  "
+            android:textColor="@color/audio_play_audio_describe_color"
+            android:textSize="11sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/update_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/audio_play_audio_describe_color"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <com.mivideo.mifm.ui.widget.player.AudioAlbumView
+        android:id="@+id/album_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/audio_detail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp" />
+
+    <com.mivideo.mifm.ui.widget.player.PlayControllerView
+        android:id="@+id/controller_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/album_view"
+        android:layout_marginTop="@dimen/audio_play_controller_layout_margin_top" />
+
+</RelativeLayout>

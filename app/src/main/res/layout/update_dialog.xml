@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_update"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_update_close" />
+
+        <TextView
+            android:id="@+id/update_dialog_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/close"
+            android:layout_gravity="center"
+            android:paddingEnd="33dp"
+            android:paddingStart="33dp"
+            android:textColor="#ffffff"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            tools:text="发现新版本" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingEnd="13dp"
+        android:paddingStart="33dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/update_dialog_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:fadeScrollbars="true"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:text="1.首页改版全线提升
+2.最新功能许愿树上线
+3.发现故事版面全新改版
+4.优化app的启动速度" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginBottom="13dp"
+            android:layout_marginTop="13dp"
+            android:background="#33000000" />
+
+        <TextView
+            android:id="@+id/update_dialog_version_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:text="版本：2121212121" />
+
+        <TextView
+            android:id="@+id/update_dialog_size_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            tools:text="大小：40GB" />
+    </LinearLayout>
+
+    <!--<View-->
+    <!--android:id="@+id/update_dialog_line"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1px"-->
+    <!--android:background="#33000000" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Button
+            android:id="@+id/update_dialog_update_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="33dp"
+            android:background="@drawable/update_down_left_right_bg"
+            tools:text="立即升级"
+            android:textColor="@color/text_dark_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/update_dialog_progress_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="33dp"
+            android:paddingRight="33dp"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/update_dialog_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:maxHeight="6dp"
+                android:minHeight="3dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:paddingStart="0dp"
+                android:progressDrawable="@drawable/update_progressbar" />
+
+            <TextView
+                android:id="@+id/update_dialog_progress_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:textColor="#717376"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

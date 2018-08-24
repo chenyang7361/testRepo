@@ -1,0 +1,285 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: "./host.gradle"
+
+repositories{
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+def getAndroidVersionName() {
+    return "${gitdata.major}.${gitdata.minor}.${gitdata.point}"
+}
+
+def getAndroidVersionCode() {
+    assert gitdata.major < 256: 'Major version number 超出限制 (< 256)'
+    assert gitdata.minor < 256: 'Minor version number 超出限制 (< 256)'
+    assert gitdata.point < 2048: 'Patch version number 超出限制 (< 1024)'
+    return gitdata.major << 18 | gitdata.minor << 10 | gitdata.point
+}
+
+def props = new Properties()
+if (project.rootProject.file("local.properties").exists()) {
+    project.rootProject.file("local.properties").withInputStream { props.load(it) }
+}
+def dontFormatApkName = { ->
+    return props.getProperty("dontFormatApkName", "false")
+}
+
+kapt {
+    arguments {
+        arg("moduleName", project.getName())
+    }
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.mivideo.mifm"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode getAndroidVersionCode()
+        versionName getAndroidVersionName()
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("./mifm.keystore")
+            storePassword "mifm.key"
+            keyAlias "key0"
+            keyPassword "mifm.key"
+        }
+        release {
+            storeFile file("./mifm.keystore")
+            storePassword "mifm.key"
+            keyAlias "key0"
+            keyPassword "mifm.key"
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("boolean", "CONFIG_DEBUG", "true")
+            signingConfig signingConfigs.debug
+            //debug不上报crash
+            ext.enableCrashlytics = false
+        }
+        release {
+            buildConfigField("boolean", "CONFIG_DEBUG", "false")
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    flavorDimensions "type", "serverEnv"
+
+    productFlavors {
+        //外发标准版
+        standard {
+            dimension "type"
+            applicationId "com.mivideo.mifm"
+            manifestPlaceholders = [
+                    scheme             : "mifm",
+                    excludeFromRecents : "false",
+                    launchMode         : "standard",
+                    mainLaunchMode     : "singleTask",
+            ]
+            buildConfigField("String", "CONFIG_CHANNEL_VERSION", "\"standard\"")
+            buildConfigField("String", "CHANNEL", "\"standard\"")
+            buildConfigField("String", "SCHEME", "\"mifm\"")
+            buildConfigField("String", "WX_APPID", "\"wx8514a6f7a05c007e\"") //应用id 需申请
+            buildConfigField("String", "XIAOMI_APPID", "\"2882303761517560254\"")
+            buildConfigField("String", "XIAOMI_APPKEY", "\"5441756053254\"")
+            buildConfigField("boolean", "CONFIG_DEFAULT_UPDATE_DIALOG", "false")
+            buildConfigField("boolean", "CONFIG_USED_CUSTOM_UPDATE_DIALOG", "true")
+            //外发版本在登录增加为“ko”的kind参数
+            buildConfigField("String", "ACCOUNT_KIND", "\"ko\"")
+        }
+
+        envPreview {
+            dimension "serverEnv"
+            buildConfigField("String", "API_URL", "\"http://preview.api.kuai.mvideo.xiaomi.com\"")
+            buildConfigField("String", "ACCOUNT_URL", "\"http://preview.duoshou.pandora.xiaomi.com\"")
+        }
+
+        envTest {
+            dimension "serverEnv"
+            buildConfigField("String", "API_URL", "\"http://mv.tv.mitvos.com\"")
+            buildConfigField("String", "ACCOUNT_URL", "\"http://preview.duoshou.pandora.xiaomi.com\"")
+
+        }
+
+        envOnline {
+            dimension "serverEnv"
+            buildConfigField("String", "API_URL", "\"https://api.kuai.mvideo.xiaomi.com\"")
+            buildConfigField("String", "ACCOUNT_URL", "\"http://duoshou.pandora.xiaomi.com\"")
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir(['libs'])
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            if ("true".equals(dontFormatApkName()) && variant.buildType.debuggable) return
+            outputFileName = "${variant.name}-${getAndroidVersionName()}.apk"
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency {
+        DependencyResolveDetails details ->
+            if (details.requested.group == 'com.android.support') {
+                if (details.requested.name == 'appcompat-v7' ||
+                        details.requested.name == 'design' ||
+                        details.requested.name == 'percent') {
+                    details.useVersion "${rootProject.supportLibVersion}"
+                }
+            }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile "com.android.support:appcompat-v7:${rootProject.supportLibVersion}"
+    compile "com.android.support:cardview-v7:${rootProject.supportLibVersion}"
+    compile "com.android.support:design:${rootProject.supportLibVersion}"
+    compile "com.android.support:percent:${rootProject.supportLibVersion}"
+    compile 'com.android.support:multidex:1.0.1'
+
+    //android生命周期管理
+    compile "android.arch.lifecycle:runtime:1.0.3"
+    annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
+
+    // KodeIn 依赖注入
+    compile 'com.github.salomonbrys.kodein:kodein:3.1.0'
+    compile 'com.github.salomonbrys.kodein:kodein-android:3.1.0'
+
+    // OkHttp
+    def okHttpVersion = "3.10.0"
+    compile "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+    compile "com.squareup.okhttp3:okhttp-urlconnection:$okHttpVersion"
+    def retrofitVersion = "2.4.0"
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofitVersion"
+
+    // Fragmentation
+    compile 'me.yokeyword:fragmentation-core:1.2.5'
+
+    // Timber
+    compile 'com.jakewharton.timber:timber:4.3.0'
+
+    // Reactive library
+    compile "io.reactivex:rxkotlin:$rxkotlinVersion"
+    compile "io.reactivex:rxandroid:$rxandroidVersion"
+    compile 'com.hwangjr.rxbus:rxbus:1.0.5'
+    compile 'com.github.pwittchen:reactivenetwork:0.12.3'
+
+    // RxPreferences
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.2'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+
+    implementation 'com.hannesdorfmann:adapterdelegates2:2.0.1'
+
+
+    //ARouter依赖
+    compile 'com.yamlee:arouter-api:1.2.2'
+    kapt 'com.yamlee:arouter-compiler:1.2.2'
+
+    // ORM for Android with Parse-like API
+    compile('com.sabres:sabres:0.9.18@aar') {
+        transitive = true
+    }
+
+    // LeanCanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+
+    // Anko
+    compile "org.jetbrains.anko:anko-sdk23:$ankoVersion"
+    compile "org.jetbrains.anko:anko-support-v4:$ankoVersion"
+    compile "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+
+    compile 'com.airbnb.android:lottie:1.5.1'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // RxPermissions
+    compile "com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar"
+
+    compile 'com.trello:rxlifecycle:0.3.0'
+    compile 'com.trello:rxlifecycle-components:0.3.0'
+
+    // Glide
+    compile "com.github.bumptech.glide:glide:3.8.0"
+    // glide-transformations
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+
+    compile 'com.google.android.exoplayer:exoplayer:2.7.1'
+
+    compile files('libs/uritemplate-1.0.jar')
+
+    // 小米update
+    compile 'mi-appstore:xiaomi-update-sdk:2.8'
+
+    compile "com.google.code.gson:gson:2.7"
+    compile ("com.xiaomi.account:passportsdk-client-ui:latest.integration") {
+        exclude group: 'com.android.support'
+    }
+
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.1.6'
+    compile 'com.sina.weibo.sdk:core:2.0.3:openDefaultRelease@aar'
+
+    compile 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+    compile 'com.github.megatronking:svg-support:1.3.2'
+
+    compile('tools.android:FairyPlugin:0.0.59.14-quickfix@aar')
+
+    implementation ('com.github.niorgai:StatusBarCompat:2.1.4', {
+        exclude group: 'com.android.support'
+    })
+
+    // FlexLayout
+    compile "com.github.mmin18:flexlayout:1.2.4"
+
+    implementation 'com.kyleduo.switchbutton:library:1.4.4'
+
+    implementation 'com.github.rey5137:material:1.2.4'
+    implementation 'me.yamlee:android-jsBridge:0.0.18'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'
+
+
+
+}
+fairy {
+    //可选配置，用于指定插件进程名。
+    //不设置即使用默认的独立进程(:plugin)
+    //设置为空串或者null即是和宿主同进程
+    //pluginProcess = ":plugin"
+}

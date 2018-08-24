@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item
+        android:drawable="@drawable/play2pause0"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause1"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause2"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause3"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause4"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause5"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause6"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause7"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause8"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause9"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause10"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause11"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause12"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause13"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause14"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause15"
+        android:duration="20" />
+    <item
+        android:drawable="@drawable/play2pause16"
+        android:duration="20" />
+
+    <item
+        android:drawable="@drawable/play2pause17"
+        android:duration="20" />
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause18"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause19"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause20"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause21"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause22"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause23"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause24"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause25"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause26"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause27"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause28"-->
+        <!--android:duration="20" />-->
+
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause29"-->
+        <!--android:duration="20" />-->
+    <!--<item-->
+        <!--android:drawable="@drawable/play2pause30"-->
+        <!--android:duration="20" />-->
+</animation-list>

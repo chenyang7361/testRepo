@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/blank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/tipView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/blank">
+
+        <FrameLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/refresh_default_empty" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/common_gray_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ic_no_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tip_retry"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_load_error" />
+
+            <TextView
+                android:id="@+id/tip_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="14dp"
+                android:text="@string/load_data_error"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:id="@+id/retry"
+                android:layout_width="73dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/tip_retry"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="29dp"
+                android:background="@drawable/bg_btn_net_error_retry">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="4dp"
+                    android:drawableStart="@drawable/icon_load_retry"
+                    android:gravity="center"
+                    android:text="@string/retry"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

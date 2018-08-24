@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <include layout="@layout/item_title" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="13dp"
+        tools:text="这个被称为“这个世界上最博学的老头”，写出来的东西总感觉是在鄙视读者的智商，看上去都是短篇小段子，但有些没有一定的知识储备读起来特别烧文字…"
+        android:textColor="@color/palette_black_40"
+        android:textSize="13dp" />
+
+</LinearLayout>

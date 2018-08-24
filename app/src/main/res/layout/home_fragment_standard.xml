@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:paddingTop="69dp" />
+
+    <LinearLayout
+        android:id="@+id/homeHeaderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 顶部标题 -->
+        <include layout="@layout/home_title_layout" />
+        <!-- 分类列表 -->
+        <com.mivideo.mifm.ui.widget.TabLayout2
+            android:id="@+id/categoryListTab"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="@color/colorPrimary"
+            android:paddingRight="2dp"
+            android.support.design:tabBackground="?attr/selectableItemBackgroundBorderless"
+            android.support.design:tabIndicatorColor="#B6FF00"
+            android.support.design:tabIndicatorHeight="0dp"
+            android.support.design:tabMinWidth="50dp"
+            android.support.design:tabMode="scrollable"
+            android.support.design:tabSelectedTextColor="#ff000000"
+            android.support.design:tabTextAppearance="@style/tabLayoutTextSize"
+            android.support.design:tabTextColor="#66000000" />
+    </LinearLayout>
+
+</FrameLayout>

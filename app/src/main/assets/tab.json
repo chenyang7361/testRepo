@@ -1,0 +1,44 @@
+{
+  "common": {
+    "exp": "eyJleHBfaWQiOiIwODQ0ZDczODAyNmM5NTJhYWQxMGY3MjdiNTdlYzA0MSJ9"
+  },
+  "data": [
+    {
+      "_id": "index",
+      "name": "首页",
+      "order": 1,
+      "alias": "首页",
+      "icon": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_home",
+      "icon_checked": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_home_pressed",
+      "action": "view-home",
+      "red_point": false,
+      "status": 1
+    },
+    {
+      "_id": "sub",
+      "name": "订阅",
+      "order": 2,
+      "alias": "订阅",
+      "icon": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_subscription",
+      "icon_checked": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_subscription_pressed",
+      "action": "view-subscribe",
+      "red_point": true,
+      "status": 1
+    },
+    {
+      "_id": "my",
+      "name": "我的",
+      "order": 3,
+      "alias": "我的",
+      "icon": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_my",
+      "icon_checked": "android.resource://com.mivideo.mifm/drawable/home_bar_icon_my_pressed",
+      "action": "view-mine",
+      "red_point": false,
+      "status": 1
+    }
+  ],
+  "times": {
+    "created": 1499763959,
+    "updated": 1499763959
+  }
+}

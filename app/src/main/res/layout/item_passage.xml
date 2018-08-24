@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/media_detail_fragment_passage_margin_start"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/text_dark_black"
+            android:textSize="13dp"
+            tools:text="1.导语：一个模型让你说话不出错" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:textColor="@color/palette_black_40"
+            android:textSize="13dp"
+            tools:text="2016-07-17 / 03:17" />
+    </LinearLayout>
+
+    <com.mivideo.mifm.ui.widget.DownloadView
+        android:id="@+id/download"
+        android:layout_width="21dp"
+        android:layout_height="21dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:alpha="0.8"
+        android:layout_marginEnd="14dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_download" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lineColor" />
+
+</RelativeLayout>

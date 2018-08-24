@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/white"
+              >
+
+    <RelativeLayout
+        android:id="@+id/rl_suggest_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/commentToolbarSize"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_suggest_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            >
+
+            <android.support.v7.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/my_icon_back"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:text="@string/suggest_fragment_title"
+                />
+        </LinearLayout>
+
+        <com.mivideo.mifm.ui.widget.MiniPlayerView
+            android:id="@+id/mini_player_suggest"
+            android:layout_width="62dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/suggest_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lineColor"
+        android:layout_below="@+id/rl_suggest_top"
+        />
+
+    <TextView
+        android:id="@+id/tv_suggest_opinion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/suggest_line"
+
+        android:textColor="#FF000000"
+        android:textSize="15sp"
+        android:text="@string/suggest_opinion"
+        />
+
+    <EditText
+        android:id="@+id/suggestContentEdit"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:layout_below="@+id/tv_suggest_opinion"
+
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="13dp"
+
+        android:background="@drawable/suggest_edit_bg"
+        android:gravity="top|left"
+        android:hint="@string/suggest_fragment_content_hint"
+        android:textColorHint="#FF9DB2BC"
+        android:padding="14dp"
+        android:textColor="#FF000000"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/tv_suggest_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/suggestContentEdit"
+
+        android:layout_marginTop="33dp"
+        android:paddingStart="33dp"
+        android:paddingTop="5dp"
+        android:text="@string/suggest_fragment_type"
+        android:textColor="#676767"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_suggest_type"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/tv_suggest_type"
+        android:background="@android:color/white"
+        android:paddingStart="33dp"
+        android:paddingEnd="17dp"
+        android:orientation="horizontal"
+        >
+
+        <com.mivideo.mifm.ui.widget.CardTextView
+            android:id="@+id/cardBugBack"
+            android:layout_width="77dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:background="@drawable/suggest_edit_bg"
+            android:text="@string/suggest_fragment_back"
+            android:textColor="#FF000000"
+            android:textSize="12sp" />
+
+        <com.mivideo.mifm.ui.widget.CardTextView
+            android:id="@+id/cardProjectSuggest"
+            android:layout_width="77dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/suggest_edit_bg"
+            android:gravity="center"
+            android:text="@string/suggest_fragment_product"
+            android:textColor="#FF000000"
+            android:textSize="12sp" />
+
+        <com.mivideo.mifm.ui.widget.CardTextView
+            android:id="@+id/cardOtherBack"
+            android:layout_width="77dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/suggest_edit_bg"
+            android:gravity="center"
+            android:text="@string/suggest_fragment_other"
+            android:textColor="#FF000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_suggest_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ll_suggest_type"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="5dp"
+        android:paddingStart="33dp"
+        android:text="@string/suggest_fragment_contract"
+        android:textColor="#676767"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/contractContent"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_below="@+id/tv_suggest_contact"
+        android:background="@drawable/suggest_edit_bg"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/suggest_fragment_contract_type"
+        android:textColorHint="#FF9DB2BC"
+        android:maxLines="1"
+        android:paddingLeft="13dp"
+        android:textSize="14sp"
+        android:textColor="#FF000000"
+        />
+
+    <TextView
+        android:id="@+id/sendSuggestButton"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="#FF6532F4"
+        android:gravity="center"
+        android:text="@string/suggest_fragment_button"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+</RelativeLayout>

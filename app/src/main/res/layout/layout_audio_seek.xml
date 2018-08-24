@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <SeekBar
+        android:id="@+id/audio_controller_seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@null"
+        android:max="100"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        android:progressDrawable="@drawable/seek_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/seek_thumb" />
+
+    <TextView
+        android:id="@+id/audio_controller_current_time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/audio_controller_seek_bar"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="1dp"
+        android:lines="1"
+        android:text="@string/video_default_delay"
+        android:textColor="@color/audio_play_audio_describe_color"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/audio_controller_duration_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/audio_controller_seek_bar"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="1dp"
+        android:lines="1"
+        android:text="@string/video_default_delay"
+        android:textColor="@color/audio_play_audio_describe_color"
+        android:textSize="11sp" />
+
+</merge>

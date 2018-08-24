@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/defaultImageLayerColor">
+
+    <ImageView
+        android:id="@+id/video_controller_play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_player_stop" />
+
+    <ImageView
+        android:id="@+id/video_controller_next_button"
+        android:layout_width="20dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="70dp"
+        app:srcCompat="@drawable/ic_player_next" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <com.mivideo.mifm.ui.widget.TintImageView
+            android:id="@+id/video_controller_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:cropToPadding="true"
+            android:paddingBottom="13dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingTop="13dp"
+            android:src="@drawable/icon_back_drawable"
+            app:tintColor="@color/white_theme_selector_color" />
+
+        <TextView
+            android:id="@+id/video_controller_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            tools:text="即将播放：这是一个很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的标题"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_player_seek" />
+
+</FrameLayout>

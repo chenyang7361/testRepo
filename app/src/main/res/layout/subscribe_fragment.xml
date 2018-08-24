@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.support.design="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/subscribe_title_layout" />
+
+    <!-- 分类列表 -->
+    <com.mivideo.mifm.ui.widget.SubscribeTab
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbarSize"
+        android:background="@color/colorPrimary"
+        android:paddingRight="2dp"
+        android.support.design:tabBackground="?attr/selectableItemBackgroundBorderless"
+        android.support.design:tabIndicatorColor="#B6FF00"
+        android.support.design:tabIndicatorHeight="0dp"
+        android.support.design:tabMinWidth="50dp"
+        android.support.design:tabMode="fixed"
+        android.support.design:tabTextAppearance="@style/tabLayoutTextSize"
+        android.support.design:tabTextColor="#66000000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_recom_more" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

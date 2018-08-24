@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="260dp"
+        android:layout_height="27dp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/history"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="13dp"
+        android:background="@drawable/shape_bg_home_search"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_search" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@color/text_recom_more"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/history"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/miniPlayer"
+        android:src="@drawable/icon_home_history" />
+
+    <com.mivideo.mifm.ui.widget.MiniPlayerView
+        android:id="@+id/miniPlayer"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/mini_play_pause" />
+
+</RelativeLayout>
